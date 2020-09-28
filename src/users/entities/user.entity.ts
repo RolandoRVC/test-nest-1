@@ -1,5 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
-
+import { type } from 'os';
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import { Chancla } from '../../chanclas/entities/chanclas.entity';
 @Entity()
 export class User{
     @PrimaryGeneratedColumn()
@@ -10,4 +11,6 @@ export class User{
     username: string;
     @Column()
     displayName: string;
+    @OneToMany(type => Chancla, chancla => chancla.user)
+    chanclas: Chancla[];
 }

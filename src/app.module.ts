@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import { UsersModule } from './users/users.module';
+import { ChanclasModule } from './chanclas/chanclas.module';
 
 @Module({
   imports: [
@@ -11,12 +12,13 @@ import { UsersModule } from './users/users.module';
           host: 'localhost',
           port: 3306,
           username: 'root',
-          password : '',
+          password : 'password',
           database: 'testnest',
           entities: [__dirname + '/**/*.entity{.ts,.js}'],
           synchronize: true,
       }),
       UsersModule,
+      ChanclasModule,
   ],
   controllers: [AppController],
   providers: [AppService],
