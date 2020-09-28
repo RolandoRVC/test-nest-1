@@ -6,6 +6,13 @@ import { UsersService } from '../../services/users/users.service';
 @Crud({
     model: {
         type: User
+    },
+    query:{
+        join:{
+            chanclas:{
+                eager: false
+            }
+        }
     }
 })
 

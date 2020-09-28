@@ -1,5 +1,4 @@
-import { type } from 'os';
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import { Chancla } from '../../chanclas/entities/chanclas.entity';
 @Entity()
 export class User{

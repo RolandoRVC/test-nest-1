@@ -5,7 +5,14 @@ import { ChanclasService } from '../../services/chanclas/chanclas.service';
 
 @Crud({
     model:{
-        type: Chancla
+        type: Chancla,
+    },
+    query:{
+        join:{
+            user:{
+                eager: false
+            }
+        }
     }
 })
 @Controller('chanclas')

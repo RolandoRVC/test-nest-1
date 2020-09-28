@@ -1,4 +1,3 @@
-import { type } from 'os';
 import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
 import { User } from "../../users/entities/user.entity";
 
@@ -8,7 +7,7 @@ export class Chancla{
     id: string;
     @Column()
     modelo: string;
-    @Column({unique:true})
+    @Column()
     color: string;
     @ManyToOne(type => User, user => user.chanclas)
     user: User;
