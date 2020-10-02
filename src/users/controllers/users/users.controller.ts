@@ -10,7 +10,7 @@ import { UsersService } from '../../services/users/users.service';
     query:{
         join:{
             chanclas:{
-                eager: false
+                eager: true
             }
         }
     }
