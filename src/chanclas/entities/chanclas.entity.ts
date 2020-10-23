@@ -9,6 +9,6 @@ export class Chancla{
     modelo: string;
     @Column()
     color: string;
-    @ManyToOne(type => User, user => user.chanclas)
+    @ManyToOne(() => User, user => user.chanclas)
     user: User;
 }

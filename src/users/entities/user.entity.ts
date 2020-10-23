@@ -10,6 +10,6 @@ export class User{
     username: string;
     @Column()
     displayName: string;
-    @OneToMany(type => Chancla, chancla => chancla.user)
+    @OneToMany(() => Chancla, chancla => chancla.user)
     chanclas: Chancla[];
 }
