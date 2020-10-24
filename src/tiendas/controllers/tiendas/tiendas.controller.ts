@@ -9,7 +9,7 @@ import { TiendasService } from '../../services/tiendas/tiendas.service';
     query:{
         join:{
             productos:{
-                eager: true
+                eager: false
             }
         }
     }
