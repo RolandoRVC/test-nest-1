@@ -8,7 +8,7 @@ export class Tiendas{
     nombre: string;
     @Column()
     direccion : string;
-    @OneToMany(()=> Productos, productos => productos.tienda)
+    @OneToMany(()=> Productos, productos => productos.tienda,)
     productos: Productos[];
 
 }

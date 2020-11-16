@@ -8,6 +8,6 @@ export class Productos{
     nombre: string;
     @Column()
     precio : number;
-    @ManyToOne(()=> Tiendas, tiendas => tiendas.productos)
+    @ManyToOne(()=> Tiendas, tiendas => tiendas.productos,{onDelete: 'CASCADE'})
     tienda: Tiendas[];
 }
